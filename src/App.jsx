@@ -1,11 +1,11 @@
-import './App.css'
+import { Layout } from "./components/Layout.jsx";
 
-function App() {
+export default function App() {
   return (
-    <>
-    <h1>Hi there, I am Ritik</h1>
-    </>
+    <Layout> 
+      <div>
+
+      </div> 
+    </Layout>
   )
 }
-
-export default App

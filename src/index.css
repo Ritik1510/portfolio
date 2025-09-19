@@ -1,12 +1,95 @@
 @import "tailwindcss";
-:root {
- --primary-light-background: rgb(241, 236, 236);
- --primary-dark-background: rgb(9, 6, 6);
- --primary-text-color: rgb(92, 81, 81);
+
+* {
+  box-sizing: border-box;
 }
 
-body{
-  background-color: var(--primary-light-background);
-  color: var(--primary-text-color);
-  padding: 15px;
+:root {
+  --primary-light-background: rgb(241, 236, 236);
+  --primary-dark-background: rgb(191, 178, 178);
+  --primary-text-color: rgb(221, 214, 214);
+
+  --sidebar-links-block-padding: clamp(0.5rem, 0.8rem, 1rem);
+  --sidebar-links-inline-padding: clamp(0.5rem, 1rem, 1rem);
+  --sidebar-links-bg-color: rgb(108, 102, 98);
+  --sidebar-border: 0;
+  --sidebar-border-radius: clamp(30px, 45px, 52px);
+
+  --vertical-boxes-bg-color: rgba(212, 203, 203, 0.101);
+  --vertical-boxes-margin: clamp(5px, 7px, 8px);
+  --vertical-boxes-border-radius: clamp(6px, 10px, 13px);
 }
+
+body {
+  background: var(--primary-dark-background);
+  background-color: var(--primary-dark-background);
+  color: var(--primary-text-color);
+  background-image: url(./Assets/anders-jilden-cYrMQA7a3Wc-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+h1 {
+  font-size: clamp(2rem, 3rem, 3.5rem);
+}
+
+.main-wrapper {
+  padding: clamp(7px, 9px, 10px);
+  gap: 4px;
+}
+
+.main-wrapper>* {
+  border: 0;
+}
+
+.left {
+  border-top-left-radius: var(--vertical-boxes-border-radius);
+  border-bottom-left-radius: var(--vertical-boxes-border-radius);
+}
+
+.center {
+  min-width: 43%;
+}
+
+.right {
+  display: grid;
+  border-top-right-radius: var(--vertical-boxes-border-radius);
+  border-bottom-right-radius: var(--vertical-boxes-border-radius);
+}
+
+.bg-blur {
+  backdrop-filter: blur(5px);
+  background-color: var(--vertical-boxes-bg-color);
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-block: var(--sidebar-links-block-padding);
+  padding-inline: var(--sidebar-links-inline-padding);
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  letter-spacing: 1.5px;
+  border: var(--sidebar-border);
+  cursor: pointer;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+}
+
+.sidebar-links:hover {
+  letter-spacing: 3px;
+  background-color: hsla(260, 32%, 93%, 0.48);
+  color: hsl(0, 0%, 100%);
+}
+
+/* 
+.sidebar-links:active {
+  letter-spacing: 30px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+} */

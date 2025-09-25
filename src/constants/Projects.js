@@ -7,7 +7,7 @@ import {
 } from "react-icons/io";
 import { SiGitbook } from "react-icons/si";
 import portfolioBG from "../Assets/portimage.jpg"
-import Skills from "./Skills.js";
+import Skills from "./Skills.jsx";
 
 const Projects = [
   {
@@ -16,17 +16,20 @@ const Projects = [
     image: portfolioBG,
     link: "#",
     timeline: "Jan `22 - now",
-    description:
+    Description:
       "Apartments & Society Management Software",
     repository: "https://github.com/ritik1510/",
-    otherLinks: [],
+    otherLinks: [
+      {
+        label: "Watch Simulation",
+        icon: BsGithub,
+        url: "https://youtu.be/HLnyWL7QPkI",screen
+      },
+    ],
     tags: [
-      Skills.frameworks.Django,
-      Skills.iot.ESP32,
-      Skills.tools.EMQX,
-      Skills.databases.InfluxDB,
-      Skills.databases.PostgreSQL,
-      Skills.tools.Telegraf,
+      Skills.frameworks.React,
+      Skills.frameworks.Tailwind,
+      Skills.frameworks.Vite
     ],
   }
 ];

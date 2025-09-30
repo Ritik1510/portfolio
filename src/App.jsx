@@ -5,10 +5,13 @@ import About from "./pages/About.jsx";
 import Skills from "./pages/SkillsSection.jsx";
 import Contact from "./pages/Contact.jsx";
 import Resume from "./pages/Resume.jsx";
+import Profile from "./pages/Profile.jsx";
 
 function AppRoutes() {
   return (
-    <RootLayout>
+    <RootLayout rightChildren={
+        <Profile/>
+      }>
       <Switch>
         <Route path='/projects' component={ProjectsSection} />
         <Route path='/skills' component={Skills} />

@@ -9,22 +9,18 @@ export default function ProjectCard({ project, highlight = false }) {
 
   return (
     <>
-      <div className="card-wrapper">
+      <div className="card-wrapper bg-blur card-border card-padding">
         {/* image */}
         <div className="card-image-box">
           <img src={project.image} alt={project.title} className="card-image" />
         </div>
-        {/* link */}
-        <div className="card-title">
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="card-title-text"
-          ></a>
+
+        <div className="card-heading hoverStyle">
+          <h1>{project.title}</h1>
         </div>
+        
         {/* timeline */}
-        <div className="card-link-box">
+        <div className="card-link-box hoverStyle">
           <span className="relative inline-flex">
             <span className="text-base">{project.timeline}</span>
             {project.timeline.includes("now") && (
@@ -60,7 +56,7 @@ export default function ProjectCard({ project, highlight = false }) {
         </div>
 
         {/* Description */}
-        <div className="card-description-box">
+        <div className="card-description-box hoverStyle">
           <p>{project.Description}</p>
         </div>
 
@@ -75,7 +71,7 @@ export default function ProjectCard({ project, highlight = false }) {
               className="tags-link-btn"
             >
               {tag.icon}
-              <span className="text-xs tracking-wide">{tag.name}</span>
+              <span className="text-xs tracking-wide hoverStyle">{tag.name}</span>
             </a>
           ))}
         </div>

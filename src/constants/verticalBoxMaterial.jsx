@@ -3,7 +3,7 @@ import { RxResume } from "react-icons/rx";
 import { IoIosContact } from "react-icons/io";
 import { IoMdInformationCircle } from "react-icons/io";
 import { GiSkills } from "react-icons/gi";
-import profileImage from "../Assets/image-removebg-preview.png"
+import profileImage from "../Assets/profile-img.jpg"
 
 export const sideBarLinksData = [
   {

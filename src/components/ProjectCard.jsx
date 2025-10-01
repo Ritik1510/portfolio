@@ -1,19 +1,26 @@
-export default function ProjectCard({ project }) {
+import { BsGithub } from "react-icons/bs";
+
+export default function ProjectCard({ project, highlight = false }) {
+  const repositoryLink = {
+    label: highlight ? "Repository" : "",
+    icon: <BsGithub />,
+    url: project.repository,
+  };
+
   return (
     <>
-      <div className="card-wrapper">
+      <div className="card-wrapper bg-blur card-border card-padding">
+        {/* image */}
         <div className="card-image-box">
           <img src={project.image} alt={project.title} className="card-image" />
         </div>
-        <div className="card-title">
-          <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="card-title-text"
-          ></a>
+
+        <div className="card-heading hoverStyle">
+          <h1>{project.title}</h1>
         </div>
-        <div className="card-link-box">
+        
+        {/* timeline */}
+        <div className="card-link-box hoverStyle">
           <span className="relative inline-flex">
             <span className="text-base">{project.timeline}</span>
             {project.timeline.includes("now") && (
@@ -24,41 +31,47 @@ export default function ProjectCard({ project }) {
             )}
           </span>
         </div>
-        <div className="flex gap-4 items-center ml-1.5">
-            {(project.repository
-              ? [repositoryLink, ...project.otherLinks]
-              : project.otherLinks
-            ).map((link) => (
-              <a
-                key={link.url}
-                className="group flex text-xl gap-2 transition-all ease-out hover:text-white"
-                href={link.url || "#"}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {link.icon}
-                {link.label && (
-                  <span className="uppercase hidden lg:block text-sm transition-all ease-out tracking-wider">
-                    {link.label}
-                  </span>
-                )}
-              </a>
-            ))}
-          </div>
-          <div className="card-description-box">
-            <p>{project.Description}</p>
-          </div>
-          <div className="card-tags-box mt-4 flex flex-wrap gap-2 text-zinc-400 cursor-default">
+
+        {/* optional links */}
+        <div className="flex">
+          {(project.repository
+            ? [repositoryLink, ...project.otherLinks]
+            : project.otherLinks
+          ).map((link) => (
+            <a
+              key={link.url}
+              className="group flex text-xl gap-2 transition-all ease-out hover:text-white"
+              href={link.url || "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {link.icon}
+              {link.label && (
+                <span className="uppercase hidden lg:block text-sm transition-all ease-out tracking-wider">
+                  {link.label}
+                </span>
+              )}
+            </a>
+          ))}
+        </div>
+
+        {/* Description */}
+        <div className="card-description-box hoverStyle">
+          <p>{project.Description}</p>
+        </div>
+
+        {/* tags */}
+        <div className="tags-link-btn-wrapper">
           {project.tags.map((tag) => (
             <a
               key={tag.name}
               href={tag.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-row items-center gap-1 bg-zinc-900 hover:bg-white hover:text-zinc-900 py-1 px-2 rounded-full transition-all ease-in-out"
+              className="tags-link-btn"
             >
               {tag.icon}
-              <span className="text-xs tracking-wide">{tag.name}</span>
+              <span className="text-xs tracking-wide hoverStyle">{tag.name}</span>
             </a>
           ))}
         </div>

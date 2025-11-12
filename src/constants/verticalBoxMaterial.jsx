@@ -39,8 +39,13 @@ export const sideBarLinksData = [
 ];
 
 export const profileData = {
-  name: "profileData",
   image: profileImage,
-  label: "Ritik Kumar",
-  description: "something about profile person..."
+  name: "Ritik Kumar",
+  description: "something about profile person...", 
+  location: "India, New Delhi",
+  mail: "kr.ritik1510@gmail.com", 
+  links: "something", 
+  linkedIn: "https://www.linkedin.com/in/kr-ritik", 
+  instagram: "https://instagram.com/_ritik__k_",
+  organizations: "something",
 }

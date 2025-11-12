@@ -1,7 +1,7 @@
 import { BsGithub } from "react-icons/bs";
-// import portfolioBG from "../Assets/portimage.jpg"
 import Skills from "./Skills.jsx";
-import portfolioBG from "../Assets/asms-profile-image.png"
+import portfolioBG from "../Assets/asms-profile-image.png";
+
 const Projects = [
   {
     title:
@@ -14,9 +14,9 @@ const Projects = [
     repository: "https://github.com/ritik1510/cp-server-js",
     otherLinks: [
       {
-        label: "something",
+        label: "Github",
         icon: BsGithub,
-        url: "",
+        url: "https://github.com/ritik1510/cp-server-js",
       },
     ],
     tags: [
@@ -32,78 +32,12 @@ const Projects = [
     timeline: "Jan `22 - now",
     Description:
       "Animation requested by the server...",
-    repository: "https://github.com/ritik1510/",
+    repository: "https://github.com/ritik1510/client-w3t",
     otherLinks: [
       {
-        label: "something",
+        label: "Github",
         icon: BsGithub,
-        url: "",
-      },
-    ],
-    tags: [
-      Skills.frameworks.React,
-      Skills.frameworks.Tailwind,
-      Skills.frameworks.Vite
-    ],
-  },
-  {
-    title:
-      "kj vjb",
-    image: portfolioBG,
-    link: "#",
-    timeline: "Jan `22 - now",
-    Description:
-      "Apartments & Society Management Software",
-    repository: "https://github.com/ritik1510/",
-    otherLinks: [
-      {
-        label: "Something... ",
-        icon: BsGithub,
-        url: "",
-      },
-    ],
-    tags: [
-      Skills.frameworks.React,
-      Skills.frameworks.Tailwind,
-      Skills.frameworks.Vite
-    ],
-  },
-  {
-    title:
-      "ibdabhc",
-    image: portfolioBG,
-    link: "#",
-    timeline: "Jan `22 - now",
-    Description:
-      "Apartments & Society Management Software",
-    repository: "https://github.com/ritik1510/",
-    otherLinks: [
-      {
-        label: "Something... ",
-        icon: BsGithub,
-        url: "",
-      },
-    ],
-    tags: [
-      Skills.frameworks.React,
-      Skills.frameworks.Tailwind,
-      Skills.frameworks.Vite
-    ],
-  },
-  {
-    title:
-      "ibdabhc",
-    image: portfolioBG,
-    link: "#",
-    timeline: "Jan `22 - now",
-    Description:
-      "Apartments & Society Management Software",
-    repository: "https://github.com/ritik1510/",
-    otherLinks: [
-      {
-        label: "something",
-        icon: BsGithub,
-        url: "",
+        url: "https://github.com/ritik1510/client-w3t",
       },
     ],
     tags: [

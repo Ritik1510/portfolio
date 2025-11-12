@@ -2,6 +2,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { ErrorBoundary } from "react-error-boundary";
+import { BrowserRouter } from "react-router-dom";
 
 function ErrorBoundaryFallBack({ error, resetErrorBoundary }) {
   return (
@@ -22,6 +23,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       console.log("App state reset after error");
     }}
   >
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </ErrorBoundary>
 );

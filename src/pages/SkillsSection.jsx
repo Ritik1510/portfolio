@@ -5,16 +5,16 @@ import Skills from "../constants/Skills.jsx";
 export default function SkillsSection() {
   return (
     <>
-      <div className="frameworks-wrapper bg-blur card-border card-padding">
+      <div className="frameworks-wrapper card-settings bg-blur card-border card-padding">
         <SkillCard category="Frameworks" skills={Skills.frameworks} />
       </div>
-      <div className="languages-wrapper bg-blur card-border card-padding">
+      <div className="languages-wrapper card-settings bg-blur card-border card-padding">
         <SkillCard category="Languages" skills={Skills.languages} />
       </div>
-      <div className="databases-wrapper bg-blur card-border card-padding">
+      <div className="databases-wrapper card-settings bg-blur card-border card-padding">
         <SkillCard category="Databases" skills={Skills.databases} />
       </div>
-      <div className="databases-wrapper bg-blur card-border card-padding">
+      <div className="tools-wrapper card-settings bg-blur card-border card-padding">
         <SkillCard category="tools" skills={Skills.tools} />
       </div>
     </>
@@ -47,7 +47,6 @@ const SkillCard = ({ category, skills }) => {
             </Link>
           </li>
         ))}
-
       </ul>
     </div>
   )

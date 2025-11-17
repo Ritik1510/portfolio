@@ -1,4 +1,6 @@
 import { BsGithub } from "react-icons/bs";
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
 
 export default function ProjectCard({ project, highlight = false }) {
   const repositoryLink = {
@@ -9,7 +11,7 @@ export default function ProjectCard({ project, highlight = false }) {
 
   return (
     <>
-      <div className="card-wrapper bg-blur card-border card-padding">
+      <div className="card-wrapper card-settings bg-blur card-border card-padding">
         {/* image */}
         <div className="card-image-box">
           <img src={project.image} alt={project.title} className="card-image" />
@@ -33,7 +35,7 @@ export default function ProjectCard({ project, highlight = false }) {
         </div>
 
         {/* optional links */}
-        <div className="flex">
+        <div className="card-optional-links-wrapper flex">
           {(project.repository
             ? [repositoryLink, ...project.otherLinks]
             : project.otherLinks

@@ -3,6 +3,7 @@ import {
   SiGnubash,
   SiHtml5,
   SiJavascript,
+  SiMysql,
   SiPostgresql,
   SiPostman,
   SiReact,
@@ -64,6 +65,11 @@ const databases = {
     name: "PostgreSQL",
     icon: <SiPostgresql />,
     href: "https://www.postgresql.org/",
+  },
+  SQL: {
+    name: "SQL", 
+    icon: <SiMysql/>, 
+    href: "#"
   }
 };
 

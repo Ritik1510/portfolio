@@ -6,7 +6,7 @@ export default function RootLayout({ children, rightChildren }) {
   const [Open, setOpen] = useState(false); 
 
   return (
-    <div className="main-wrapper">
+    <div className="main-wrapper overlay">
       {/* left  content */}
       <aside className="left">
         <div className="hero-heading">

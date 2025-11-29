@@ -44,11 +44,11 @@ export const profileData = {
   image: profileImage,
   label: "Ritik Kumar",
   name: "Ritik Kumar",
-  description: "Something about profile person...",
+  Roles: [],
   location: [{ value: "India, New Delhi", icon: IoLocationOutline }],
   mail: [{ value: "kr.ritik1510@gmail.com", icon: IoMailOutline }],
   links: [{ href: "https://www.github.com/ritik1510/", value: "Github", icon: IoIosLink }],
   linkedIn: [{ href: "https://www.linkedin.com/in/kr-ritik", value: "kr-ritik", icon: ImLinkedin }],
   instagram: [{ href: "https://instagram.com/_ritik__k_", value: "_ritik__k_", icon: IoIosLink }],
-  organizations: [{ href: "", value: "Emi...", icon: GrOrganization}],
+  organizations: [{ href: "https://www.github.com/ritik1510/", value: "Emi...", icon: GrOrganization}],
 }

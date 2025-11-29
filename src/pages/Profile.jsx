@@ -3,14 +3,15 @@ import { profileData } from "../constants/verticalBoxMaterial"
 function Profile() {
   return (
     <>
-      <div className="profile-wrapper bg-blur card-border card-padding card-grid">
-        <div className="profile-image-primary-wrapper">
+      <div className="profile-wrapper flex flex-col bg-blur card-border card-padding card-grid">
+        <div className="profile-image-primary-wrapper w-full">
           <div className="profile-image-secondary-wrapper">
-            <a href="" className="profile-image-link block aspect-[1.1/1] overflow-hidden">
+            <a href="" className="profile-image-link">
               <img src={profileData.image} alt={profileData.label} className="profile-image" />
             </a>
           </div>
         </div>
+
         <div className="profile-name-wrapper hoverStyle">
           <h1>{profileData.name}</h1>
         </div>

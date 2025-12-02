@@ -36,7 +36,7 @@ const SkillCard = ({ category, skills }) => {
               href={skill.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="skills-btn flex justify-center items-center gap-3.5 px-1"xs
+              className="skills-btn flex justify-center items-center gap-1.5 px-1"xs
             >
               <span className="skills-btn-icon">
                 {skill.icon}

@@ -44,7 +44,7 @@ export const profileData = {
   image: profileImage,
   label: "Ritik Kumar",
   name: "Ritik Kumar",
-  Roles: [],
+  description: "Full-stack Engineer",
   location: [{ value: "India, New Delhi", icon: IoLocationOutline }],
   mail: [{ value: "kr.ritik1510@gmail.com", icon: IoMailOutline }],
   links: [{ href: "https://www.github.com/ritik1510/", value: "Github", icon: IoIosLink }],

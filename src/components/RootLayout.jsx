@@ -29,7 +29,7 @@ export default function RootLayout({ children, rightChildren }) {
         </nav>
       </aside>
       {/* Main content */}
-      <main className="center overflow-y-auto">{children}</main>
+      <main className="overflow-y-auto">{children}</main>
  
       {/* Right content */}
       <aside className="right vertical-boxes-paddings sticky top-0">

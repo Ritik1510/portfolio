@@ -4,7 +4,7 @@ import Skills from "../constants/Skills.jsx";
 
 export default function SkillsSection() {
   return (
-    <>
+    <div className="center">
       <div className="frameworks-wrapper card-settings bg-blur card-border card-padding">
         <SkillCard category="Frameworks" skills={Skills.frameworks} />
       </div>
@@ -17,7 +17,7 @@ export default function SkillsSection() {
       <div className="tools-wrapper card-settings bg-blur card-border card-padding">
         <SkillCard category="tools" skills={Skills.tools} />
       </div>
-    </>
+    </div>
   )
 }
 
@@ -36,7 +36,7 @@ const SkillCard = ({ category, skills }) => {
               href={skill.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="skills-btn flex justify-center items-center gap-3.5 px-1"xs
+              className="skills-btn flex justify-center items-center gap-1.5 px-1"xs
             >
               <span className="skills-btn-icon">
                 {skill.icon}

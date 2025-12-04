@@ -4,7 +4,7 @@ import Skills from "../constants/Skills.jsx";
 
 export default function SkillsSection() {
   return (
-    <>
+    <div className="center">
       <div className="frameworks-wrapper card-settings bg-blur card-border card-padding">
         <SkillCard category="Frameworks" skills={Skills.frameworks} />
       </div>
@@ -17,7 +17,7 @@ export default function SkillsSection() {
       <div className="tools-wrapper card-settings bg-blur card-border card-padding">
         <SkillCard category="tools" skills={Skills.tools} />
       </div>
-    </>
+    </div>
   )
 }
 

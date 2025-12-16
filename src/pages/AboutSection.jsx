@@ -7,7 +7,7 @@ import { MdEmail } from "react-icons/md";
 export default function AboutSection() {
   return (
     <div className="mx-3 md:mx-5">
-      <ul className="flex flex-col gap-3 md:gap-5 lg:gap-8">
+      <ul className="about-ul-wrapper flex flex-col gap-3 md:gap-5 lg:gap-8">
         <li>
           <About
             title="Full-Stack Engineer"

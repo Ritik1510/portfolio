@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter"
+import { Switch, Route, Redirect } from "wouter"
 import RootLayout from "./components/RootLayout.jsx";
 import ProjectsSection from "./pages/ProjectsSection.jsx";
 import Contact from "./pages/Contact.jsx";
@@ -9,10 +9,11 @@ import AboutSection from "./pages/AboutSection.jsx";
 
 function AppRoutes() {
   return (
-    <RootLayout rightChildren={
-        <Profile/>
-      }>
+    <RootLayout rightChildren={<Profile/>}>
       <Switch>
+        <Route path="/"> {/** default page for first rendering */}
+          <Redirect to="/projects" />
+        </Route>
         <Route path='/projects' component={ProjectsSection} />
         <Route path='/skills' component={SkillsSection} />
         <Route path='/about' component={AboutSection} />

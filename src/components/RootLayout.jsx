@@ -32,7 +32,7 @@ export default function RootLayout({ children, rightChildren }) {
       <main className="overflow-y-auto">{children}</main>
  
       {/* Right content */}
-      <aside className="right vertical-boxes-paddings sticky top-0">
+      <aside className="right pr-2 sm:pr-1.5 sticky top-0">
           {rightChildren}
       </aside>
     </div>

@@ -67,13 +67,12 @@
 
 #root {
   height: 100svh;
-  min-width: 100svb;
+  width: 100svw;
+  overflow-x: hidden;
 }
 
 body {
   background: var(--primary-dark-background);
-  /* background-color: var(--primary-dark-background); */
-  color: var(--primary-text-color);
   background-image: url(./Assets/portimage.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -81,6 +80,9 @@ body {
   background-size: cover;
   margin-inline: auto;
   display: block;
+  height: 100svh;
+  min-width: 100svw;
+  color: var(--primary-text-color);
 }
 
 img {
@@ -102,20 +104,12 @@ img {
 
 .overlay {
   border-image:
-    linear-gradient(hsla(257, 100%, 50%, 0.1)) fill 0.5;
+    linear-gradient(hsla(18, 75%, 57%, 0)) fill 0.5;
 }
 
 .left {
   border-top-left-radius: var(--vertical-boxes-border-radius);
   border-bottom-left-radius: var(--vertical-boxes-border-radius);
-  height: 100%;
-  position: sticky;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
   border-right: var(--primary-border);
   padding-inline-end: var(--vertical-boxes-inline-padding);
 }
@@ -126,8 +120,6 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: clamp(1rem, 4%, 1.5rem);
   height: 100%;
-  padding-inline: clamp(0.3rem, 0.5rem, 0.8rem);
-  padding-block: clamp(0.5rem, 0.8rem, 1rem);
   overflow-y: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -194,6 +186,7 @@ img {
   backdrop-filter: blur(20px);
   width: 100%;
   padding-block: var(--tags-primary-block-padding);
+  border-radius: var(--borderRadius-medium);
 }
 
 .card-wrapper>*:not(:first-child) {
@@ -208,6 +201,10 @@ img {
 .card-image {
   display: block;
   margin: 0 auto;
+}
+
+.card-description-box {
+  max-height: 30%;
 }
 
 .tags-link-btn-wrapper {
@@ -303,6 +300,18 @@ img {
   backdrop-filter: blur(20px);
   border-radius: var(--borderRadius-medium);
   color: var(--primary-dark-background);
+  border: 1px solid hsl(0, 0%, 100%, 0.3);
+  border-width: var(--borderWidth-thin);
+}
+
+.tab-tracker-heading {
+  border: solid hsl(0, 0%, 100%, 0.3);
+  border-width: var(--borderWidth-thin);
+}
+
+/* common classes css */
+.bg-blur {
+  backdrop-filter: blur(20px);
 }
 
 @media (max-width: 1000px) {
@@ -313,6 +322,10 @@ img {
   .center {
     grid-template-columns: 1fr;
     margin-inline: auto;
+  }
+
+  .projects-section-wrapper>* {
+    place-self: center;
   }
 
   .right {

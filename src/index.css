@@ -41,7 +41,7 @@
   --card-border-radius: clamp(1rem, 1.5rem, 1.8rem);
 
   --sidebar-links-block-padding: clamp(0.5rem, 0.8rem, 1rem);
-  --sidebar-links-inline-padding: clamp(0.5rem, 1rem, 1rem);
+  --sidebar-links-inline-padding: clamp(0.4rem, 0.8rem, 1rem);
   --sidebar-links-bg-color: rgb(108, 102, 98);
   --sidebar-border: 0;
   --sidebar-border-radius: clamp(30px, 45px, 52px);
@@ -114,13 +114,20 @@ img {
   padding-inline-end: var(--vertical-boxes-inline-padding);
 }
 
+.main-content-column{
+  scrollbar-width: none;
+}
+
+.main-content-column::-webkit-scrollbar {
+  display: none;
+}
+
 .center {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(1rem, 4%, 1.5rem);
   height: 100%;
-  overflow-y: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -163,7 +170,7 @@ img {
 
 .nav-link-icon {
   height: clamp(1.5rem, 2rem, 2.3rem);
-  width: 2rem;
+  width: clamp(1.2rem, 1.7rem, 2rem);
 }
 
 .nav-links-wrapper {
@@ -314,7 +321,7 @@ img {
   backdrop-filter: blur(20px);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1023px) {
   .left {
     display: flex;
   }
@@ -329,7 +336,12 @@ img {
   }
 
   .right {
-    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 60vw;
+    backdrop-filter: blur(20px);
+    color: rgb(206, 206, 206);
   }
 
   .nav-link-labels {

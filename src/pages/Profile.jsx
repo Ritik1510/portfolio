@@ -1,13 +1,20 @@
 import { profileData } from "../constants/verticalBoxMaterial"
 
 function Profile() {
+
   return (
     <>
-      <div className="profile-wrapper flex flex-col bg-blur card-border card-padding card-grid">
+      <div
+        className={`profile-wrapper flex flex-col 
+        card-border card-padding card-grid overflow-hidden
+         `}>
         <div className="profile-image-primary-wrapper w-full">
           <div className="profile-image-secondary-wrapper">
             <a href="" className="profile-image-link">
-              <img src={profileData.image} alt={profileData.label} className="profile-image" />
+              <img
+                src={profileData.image}
+                alt={profileData.label}
+                className="profile-image" />
             </a>
           </div>
         </div>
@@ -21,7 +28,10 @@ function Profile() {
         <div className="info flex flex-col gap-1">
           <div className="profile-location-wrapper">
             {profileData.location.map((item, index) => (
-              <div key={index} className="profile-location-item flex items-center gap-2 hoverStyle">
+              <div
+                key={index}
+                className="profile-location-item flex 
+                items-center gap-2 hoverStyle">
                 <item.icon />
                 <span>{item.value}</span>
               </div>

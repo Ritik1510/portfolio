@@ -4,7 +4,13 @@ import Skills from "../constants/Skills.jsx";
 
 export default function SkillsSection() {
   return (
-    <div className="center">
+    <>
+    <div
+      className="tab-tracker-heading mb-2 md:mb-2.5
+      rounded-(--borderRadius-medium) w-full bg-blur card-padding">
+      <p className="">Skills</p>
+    </div>
+    <div className="center skills-section-wrapper">
       <div className="frameworks-wrapper card-settings bg-blur card-border card-padding">
         <SkillCard category="Frameworks" skills={Skills.frameworks} />
       </div>
@@ -18,6 +24,7 @@ export default function SkillsSection() {
         <SkillCard category="tools" skills={Skills.tools} />
       </div>
     </div>
+    </>
   )
 }
 

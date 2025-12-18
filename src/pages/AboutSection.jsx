@@ -6,53 +6,61 @@ import { MdEmail } from "react-icons/md";
 
 export default function AboutSection() {
   return (
-    <div className="mx-3 md:mx-5">
-      <ul className="about-ul-wrapper flex flex-col gap-3 md:gap-5 lg:gap-8">
-        <li>
-          <About
-            title="Full-Stack Engineer"
-            subtitle="Practicing"
-            description="Working on some projects"
-            timeline="May `24 - now"
-            link="https://github.com/ritik1510"
-            icon={<BiCode />}
-          />
-        </li>
-        <li>
-          <About
-            title="BCA - Bachelor of Computer Applications"
-            subtitle="Indira Gandhi National Open University"
-            description="Graduated"
-            timeline="July `22 - june `25"
-            icon={<FaGraduationCap />}
-          />
-        </li>
-        <li>
-          <About
-            title="Higher Secondary Education"
-            subtitle="SKD Public School, Bulandshahr"
-            timeline="2020 - 2022"
-            icon={<ImBooks />}
-          />
-        </li>
-        <li>
-          <About
-            title="Primary & Secondary Education"
-            subtitle="SKD Public School, Bulandshahr"
-            timeline="2007 - 2020"
-            icon={<ImBooks />}
-          />
-        </li>
-        <li>
-          <About
-            timeline="Contact me at"
-            title="kr.ritik1510@gmail.com"
-            link="mailto:kr.ritik1510@gmail.com"
-            icon={<MdEmail />}
-          />
-        </li>
-      </ul>
-    </div>
+    <>
+      <div
+        className="tab-tracker-heading
+      rounded-(--borderRadius-medium) w-full bg-blur card-padding mb-2 md:mb-2.5">
+        <p className="">About</p>
+      </div>
+
+      <div className="mx-3 md:mx-5">
+        <ul className="about-ul-wrapper flex flex-col gap-3 md:gap-5 lg:gap-8">
+          <li>
+            <About
+              title="Full-Stack Engineer"
+              subtitle="Practicing"
+              description="Working on some projects"
+              timeline="May `24 - now"
+              link="https://github.com/ritik1510"
+              icon={<BiCode />}
+            />
+          </li>
+          <li>
+            <About
+              title="BCA - Bachelor of Computer Applications"
+              subtitle="Indira Gandhi National Open University"
+              description="Graduated"
+              timeline="July `22 - june `25"
+              icon={<FaGraduationCap />}
+            />
+          </li>
+          <li>
+            <About
+              title="Higher Secondary Education"
+              subtitle="SKD Public School, Bulandshahr"
+              timeline="2020 - 2022"
+              icon={<ImBooks />}
+            />
+          </li>
+          <li>
+            <About
+              title="Primary & Secondary Education"
+              subtitle="SKD Public School, Bulandshahr"
+              timeline="2007 - 2020"
+              icon={<ImBooks />}
+            />
+          </li>
+          <li>
+            <About
+              timeline="Contact me at"
+              title="kr.ritik1510@gmail.com"
+              link="mailto:kr.ritik1510@gmail.com"
+              icon={<MdEmail />}
+            />
+          </li>
+        </ul>
+      </div>
+    </>
   )
 }
 
@@ -69,7 +77,7 @@ const About = (about) => {
   );
 }
 
-const AboutCardContent = ({content}) => {
+const AboutCardContent = ({ content }) => {
   const current = content.timeline.includes("now");
   return (
     <div className="group flex items-start lg:p-4 rounded-lg transition-all ease-out text-zinc-200 text-base card-border sm:p-2 md:p-2.5">

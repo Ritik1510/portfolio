@@ -6,6 +6,8 @@ import { GiSkills } from "react-icons/gi";
 import profileImage from "../Assets/profile-img.jpg"
 import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
 import { ImLinkedin } from "react-icons/im";
+import resumeImage from "../Assets/resume-image.png";
+
 
 export const sideBarLinksData = [
   {
@@ -52,3 +54,20 @@ export const profileData = {
   instagram: [{ href: "https://instagram.com/_ritik__k_", value: "_ritik__k_", icon: IoIosLink }],
   organizations: [{ href: "https://www.github.com/ritik1510/", value: "Emi...", icon: GrOrganization}],
 }
+
+export const resumeData = {
+  resumeImage: resumeImage,
+  fileName: "Ritik_Kumar_Resume.pdf",
+  type: "PDF Document",
+  meta: [
+    { label: "Author", value: "Ritik Kumar" },
+    { label: "File Size", value: "..." },
+    { label: "Created", value: "June 10, 2024" },
+    { label: "Modified", value: "June 10, 2024" },
+    {
+      label: "Online",
+      value: "https://drive.google.com/file/d/19nOcjKuQoVC7M2yYAVA21kaeSbud0B5a/view?usp=drivesdk",
+      isLink: true
+    }
+  ]
+};

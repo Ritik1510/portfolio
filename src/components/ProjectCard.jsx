@@ -11,7 +11,7 @@ export default function ProjectCard({ project, highlight = false }) {
 
   return (
     <>
-      <div className="card-wrapper card-settings bg-blur card-border card-padding gap-1 md;gap-1.5">
+      <div className="card-wrapper card-settings card-padding gap-1 md;gap-1.5">
         {/* image */}
         <div className="card-image-box">
           <img src={project.image} alt={project.title} className="card-image" />

@@ -96,6 +96,8 @@ img {
 .main-wrapper {
   padding: clamp(2px, 3px, 5px);
   gap: clamp(2px, 3px, 4px);
+  height: 100%;
+  width: 100%;
   display: grid;
   grid-template-columns: min-content 1fr minmax(auto, 25%);
 }

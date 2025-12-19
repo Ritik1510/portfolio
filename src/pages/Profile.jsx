@@ -6,8 +6,7 @@ function Profile() {
     <>
       <div
         className={`profile-wrapper flex flex-col 
-        card-border card-padding card-grid overflow-hidden
-         `}>
+        card-border card-padding card-grid overflow-hidden lg:pl-2 `}>
         <div className="profile-image-primary-wrapper w-full">
           <div className="profile-image-secondary-wrapper">
             <a href="" className="profile-image-link">

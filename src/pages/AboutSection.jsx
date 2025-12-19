@@ -2,7 +2,6 @@ import { BiCode } from "react-icons/bi";
 import { FaGraduationCap } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
 import { ImBooks } from "react-icons/im";
-import { MdEmail } from "react-icons/md";
 
 export default function AboutSection() {
   return (
@@ -13,7 +12,7 @@ export default function AboutSection() {
         <p className="">About</p>
       </div>
 
-      <div className="mx-3 md:mx-5">
+      <div className="">
         <ul className="about-ul-wrapper flex flex-col gap-3 md:gap-5 lg:gap-8">
           <li>
             <About
@@ -50,14 +49,6 @@ export default function AboutSection() {
               icon={<ImBooks />}
             />
           </li>
-          <li>
-            <About
-              timeline="Contact me at"
-              title="kr.ritik1510@gmail.com"
-              link="mailto:kr.ritik1510@gmail.com"
-              icon={<MdEmail />}
-            />
-          </li>
         </ul>
       </div>
     </>
@@ -80,7 +71,7 @@ const About = (about) => {
 const AboutCardContent = ({ content }) => {
   const current = content.timeline.includes("now");
   return (
-    <div className="group flex items-start lg:p-4 rounded-lg transition-all ease-out text-zinc-200 text-base card-border sm:p-2 md:p-2.5">
+    <div className="about-info-group p-2 md:p-2.5 border-b-[0.2367px] flex items-start lg:p-4 rounded-lg transition-all ease-out text-zinc-200 text-base card-border sm:p-2 md:p-2.5">
       <div className="min-w-fit text-2xl mt-5">{content.icon}</div>
       <div className="flex flex-col pl-3 gap-1">
         <span>
@@ -95,7 +86,7 @@ const AboutCardContent = ({ content }) => {
           </span>
         </span>
         <div className="flex items-center">
-          <span className="font-bold tracking-wide lg:text-xl pr-3 text-white">
+          <span className="font-bold tracking-wide md:text-md lg:text-xl pr-3 text-white">
             {content.title}
           </span>
           {content.link && (

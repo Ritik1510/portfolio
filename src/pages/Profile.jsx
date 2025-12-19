@@ -9,11 +9,11 @@ function Profile() {
         card-border card-padding card-grid overflow-hidden lg:pl-2 `}>
         <div className="profile-image-primary-wrapper w-full">
           <div className="profile-image-secondary-wrapper">
-            <a href="" className="profile-image-link">
+            <a href="" className="profile-image-link block w-full h-full no-underline rounded-full overflow-hidden">
               <img
                 src={profileData.image}
                 alt={profileData.label}
-                className="profile-image" />
+                className="profile-image " />
             </a>
           </div>
         </div>

@@ -1,11 +1,7 @@
 import { Switch, Route, Redirect } from "wouter"
 import RootLayout from "./components/RootLayout.jsx";
-import ProjectsSection from "./pages/ProjectsSection.jsx";
-import Contact from "./pages/Contact.jsx";
-import Resume from "./pages/Resume.jsx";
 import Profile from "./pages/Profile.jsx";
-import SkillsSection from "./pages/SkillsSection.jsx";
-import AboutSection from "./pages/AboutSection.jsx";
+import { ROUTES } from "./routes/routes.config.js";
 
 function AppRoutes() {
   return (
@@ -14,11 +10,9 @@ function AppRoutes() {
         <Route path="/"> {/** default page for first rendering */}
           <Redirect to="/projects" />
         </Route>
-        <Route path='/projects' component={ProjectsSection} />
-        <Route path='/skills' component={SkillsSection} />
-        <Route path='/about' component={AboutSection} />
-        <Route path='/resume' component={Resume} />
-        <Route path='/contact' component={Contact} />
+        {ROUTES.map(({path, component}) => (
+          <Route key={path} path={path} component={component} />
+        ))}
       </Switch>
     </RootLayout>
   );

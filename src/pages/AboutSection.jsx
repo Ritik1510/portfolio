@@ -2,18 +2,23 @@ import { BiCode } from "react-icons/bi";
 import { FaGraduationCap } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
 import { ImBooks } from "react-icons/im";
+import { bottomToTop } from "../Animations/bottomToTop";
+import { useGSAP } from "@gsap/react";
 
 export default function AboutSection() {
+  useGSAP(() => {
+    bottomToTop({
+      targets: "#id-about-ul-wrapper > *"
+    })
+  }, []);
+
   return (
     <>
-      <div
-        className="tab-tracker-heading
-      rounded-(--borderRadius-medium) w-full bg-blur card-padding mb-2 md:mb-2.5">
-        <p className="">About</p>
-      </div>
-
-      <div className="">
-        <ul className="about-ul-wrapper flex flex-col gap-3 md:gap-5 lg:gap-8">
+      <div id="id-about-section-wrapper">
+        <ul 
+          id="id-about-ul-wrapper" 
+          className="about-ul-wrapper flex flex-col 
+          gap-3 md:gap-5 lg:gap-8">
           <li>
             <About
               title="Full-Stack Engineer"

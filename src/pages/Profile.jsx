@@ -1,12 +1,26 @@
+import { useGSAP } from "@gsap/react";
 import { profileData } from "../constants/verticalBoxMaterial"
+import { bottomToTop } from "../Animations/bottomToTop";
+import { useSidebar } from "../context/Sidebar.context";
 
 function Profile() {
+  const expanded = useSidebar();
+  useGSAP(() => {
+    if (!expanded) return;
+      bottomToTop({
+        targets: "#id-profile-wrapper > *",
+        y: 300,
+        duration: 1,
+      })
+    }, [expanded]);
 
   return (
     <>
       <div
+        id="id-profile-wrapper"
         className={`profile-wrapper flex flex-col 
-        card-border card-padding card-grid overflow-hidden lg:pl-2 `}>
+        card-border card-padding card-grid overflow-hidden 
+        lg:pl-2`}>
         <div className="profile-image-primary-wrapper w-full">
           <div className="profile-image-secondary-wrapper">
             <a href="" className="profile-image-link block w-full h-full no-underline rounded-full overflow-hidden">

@@ -1,15 +1,18 @@
+import { useGSAP } from "@gsap/react";
 import { contactData } from "../constants/verticalBoxMaterial"
+import { bottomToTop } from "../Animations/bottomToTop";
 
 function Contact() {
+  useGSAP(() => {
+      bottomToTop({
+        targets: "#id-contact-ul-wrapper > *"
+      })
+    }, []);
+    
   return (
     <>
-      <div
-        className="tab-tracker-heading mb-2 md:mb-2.5
-        rounded-(--borderRadius-medium) w-full bg-blur card-padding">
-        <p className="">Contact</p>
-      </div>
       <div className="contact-wrapper mx-auto w-[70%]">
-        <ul className="contact-ul-wrapper flex flex-col gap-3">
+        <ul id="id-contact-ul-wrapper" className="contact-ul-wrapper flex flex-col gap-3">
           {contactData.map((item, index) => (
             <li key={index} className="contact-li-item flex items-center gap-3 border-b-[0.2367px]">
               <div className="text-xl">

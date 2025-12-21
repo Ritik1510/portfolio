@@ -21,6 +21,5 @@ export const bottomToTop = ({
       clearProps: "transform,opacity",
     }
   );
-  console.log("i m animation file")
   return tl;
 };

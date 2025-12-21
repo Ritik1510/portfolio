@@ -1,15 +1,30 @@
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { useState } from "react";
 import { sideBarLinksData } from "../constants/verticalBoxMaterial.jsx";
 import profileOpenerImg from "../Assets/profile-img.jpg";
 import { SidebarContext } from "../context/Sidebar.context.js";
+import { ROUTES } from "../routes/routes.config.js";
+import { useGSAP } from "@gsap/react";
+import { bottomToTop } from "../Animations/bottomToTop.js";
 
 export default function RootLayout({ children, rightChildren }) {
   const [expanded, setExpanded] = useState(false);
+  const [location] = useLocation();
+
+  // console.log("location:", location);
+  const currentRoute =
+    ROUTES.find(r => r.path === location);
+  // console.log("currentRoute:", currentRoute);
+
+  useGSAP(() => {
+    bottomToTop({
+      targets: "#id-tab-tracker-heading"
+    })
+  }, [currentRoute]);
 
   return (
     <SidebarContext.Provider value={{ expanded, setExpanded }}>
-      <div className="main-wrapper overlay sticky">
+      <div className="main-wrapper sticky">
         {/* left  content */}
         <aside className="left h-full w-full top-0 flex justify-end flex-col">
           <div className="profile-opener-wrapper absolute top-1">
@@ -44,12 +59,19 @@ export default function RootLayout({ children, rightChildren }) {
         </aside>
 
         {/* Main content */}
-        <main className="main-content-column overflow-y-auto card-padding ">{children}</main>
+        <main className="main-content-column overflow-y-auto card-padding ">
+          <div
+            id="id-tab-tracker-heading"
+            className="tab-tracker-heading mb-2 md:mb-2.5
+            rounded-(--borderRadius-medium) w-full bg-blur card-padding">
+            <p>{currentRoute?.label ?? "Overview"}</p>
+          </div>
+          {children}
+        </main>
 
         {/* Right content */}
-
-        <aside 
-        className={`right pr-2 sm:pr-1.5 overflow-hidden 
+        <aside
+          className={`right pr-2 sm:pr-1.5 overflow-hidden 
         transition-transform duration-300 ease-in-out
         lg:relative lg:translate-x-0
         ${expanded ? "translate-x-0" : "translate-x-full"}`}>

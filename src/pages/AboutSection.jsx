@@ -2,18 +2,23 @@ import { BiCode } from "react-icons/bi";
 import { FaGraduationCap } from "react-icons/fa";
 import { GoLinkExternal } from "react-icons/go";
 import { ImBooks } from "react-icons/im";
+import { bottomToTop } from "../Animations/bottomToTop";
+import { useGSAP } from "@gsap/react";
 
 export default function AboutSection() {
+  useGSAP(() => {
+    bottomToTop({
+      targets: "#id-about-ul-wrapper > *"
+    })
+  }, []);
+
   return (
     <>
-      <div
-        className="tab-tracker-heading
-      rounded-(--borderRadius-medium) w-full bg-blur card-padding mb-2 md:mb-2.5">
-        <p className="">About</p>
-      </div>
-
-      <div className="">
-        <ul className="about-ul-wrapper flex flex-col gap-3 md:gap-5 lg:gap-8">
+      <div id="id-about-section-wrapper">
+        <ul 
+          id="id-about-ul-wrapper" 
+          className="about-ul-wrapper flex flex-col 
+          gap-3 md:gap-5 lg:gap-8">
           <li>
             <About
               title="Full-Stack Engineer"
@@ -71,7 +76,7 @@ const About = (about) => {
 const AboutCardContent = ({ content }) => {
   const current = content.timeline.includes("now");
   return (
-    <div className="about-info-group p-2 md:p-2.5 border-b-[0.2367px] flex items-start lg:p-4 rounded-lg transition-all ease-out text-zinc-200 text-base card-border sm:p-2 md:p-2.5">
+    <div className="about-info-group p-2 border-b-[0.2367px] flex items-start lg:p-4 rounded-lg transition-all ease-out text-zinc-200 text-base card-border sm:p-2">
       <div className="min-w-fit text-2xl mt-5">{content.icon}</div>
       <div className="flex flex-col pl-3 gap-1">
         <span>

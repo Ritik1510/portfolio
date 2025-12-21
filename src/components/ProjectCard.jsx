@@ -1,6 +1,6 @@
 import { BsGithub } from "react-icons/bs";
-import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { bottomToTop } from "../Animations/bottomToTop.js";
 
 export default function ProjectCard({ project, highlight = false }) {
   const repositoryLink = {
@@ -9,9 +9,16 @@ export default function ProjectCard({ project, highlight = false }) {
     url: project.repository,
   };
 
+  useGSAP(() => {
+    bottomToTop({
+      targets: "#id-card-wrapper"
+    })
+  }, []);
+
   return (
     <>
-      <div className="card-wrapper card-settings card-padding gap-1 md;gap-1.5">
+      <div id="id-card-wrapper" className="card-wrapper card-settings card-padding 
+      gap-[0.8563px] flex flex-col items-start justify-between">
         {/* image */}
         <div className="card-image-box">
           <img src={project.image} alt={project.title} className="card-image" />
@@ -20,7 +27,7 @@ export default function ProjectCard({ project, highlight = false }) {
         <div className="card-heading bg-blur rounded-sm w-full">
           <span className="text-lg leading-tight">{project.title}</span>
         </div>
-        
+
         {/* timeline */}
         <div className="card-link-box">
           <span className="relative inline-flex">

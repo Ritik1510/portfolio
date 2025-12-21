@@ -76,7 +76,7 @@ const About = (about) => {
 const AboutCardContent = ({ content }) => {
   const current = content.timeline.includes("now");
   return (
-    <div className="about-info-group p-2 md:p-2.5 border-b-[0.2367px] flex items-start lg:p-4 rounded-lg transition-all ease-out text-zinc-200 text-base card-border sm:p-2 md:p-2.5">
+    <div className="about-info-group p-2 border-b-[0.2367px] flex items-start lg:p-4 rounded-lg transition-all ease-out text-zinc-200 text-base card-border sm:p-2">
       <div className="min-w-fit text-2xl mt-5">{content.icon}</div>
       <div className="flex flex-col pl-3 gap-1">
         <span>

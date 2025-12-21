@@ -1,18 +1,27 @@
+import { useGSAP } from "@gsap/react";
 import { resumeData } from "../constants/verticalBoxMaterial.jsx";
+import { bottomToTop } from "../Animations/bottomToTop.js";
 
 function Resume() {
   const { resumeImage, fileName, type, meta } = resumeData;
+  useGSAP(() => {
+      bottomToTop({
+        targets: "#id-resume-wrapper > *"
+      })
+    }, []);
 
   return (
     <>
-      <div className="tab-tracker-heading mb-2 md:mb-2.5 rounded-(--borderRadius-medium) w-full bg-blur card-padding">
-        <p>Resume</p>
-      </div>
-
-      <div className="resume-image-wrapper grid grid-cols-1 gap-1 h-full w-full">
+      <div 
+        id="id-resume-wrapper"
+        className="resume-wrapper grid 
+        grid-cols-1 gap-1 h-full w-full">
         <div className="resume-image-holder mx-auto">
           {resumeImage ? (
-            <img src={resumeImage} alt="Resume Preview" className="block max-h-[70vh] max-w-[100%]"/>
+            <img 
+              src={resumeImage} 
+              alt="Resume Preview" 
+              className="block max-h-[70vh] max-w-[100%]"/>
           ) : (
             <div className="resume-placeholder">No Preview</div>
           )}

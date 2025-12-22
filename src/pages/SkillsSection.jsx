@@ -13,17 +13,24 @@ export default function SkillsSection() {
 
   return (
     <>
-      <div id="id-skills-section-wrapper" className="center skills-section-wrapper">
+      <div
+        id="id-skills-section-wrapper"
+        className="skills-section-wrapper 
+        grid gap-4 grid-cols-1
+        md:grid-cols-[repeat(auto-fit,minmax(280px,1fr))]
+        lg:grid-cols-[repeat(auto-fit,minmax(320px,1fr))]
+        lg:place-self-center
+        ">
         <div className="frameworks-wrapper card-settings bg-blur card-border card-padding">
           <SkillCard category="Frameworks" skills={Skills.frameworks} />
         </div>
-        <div className="languages-wrapper card-settings bg-blur card-border card-paddin">
+        <div className="languages-wrapper card-settings bg-blur card-border card-padding">
           <SkillCard category="Languages" skills={Skills.languages} />
         </div>
-        <div className="databases-wrapper card-settings bg-blur card-border card-paddin">
+        <div className="databases-wrapper card-settings bg-blur card-border card-padding">
           <SkillCard category="Databases" skills={Skills.databases} />
         </div>
-        <div className="tools-wrapper card-settings bg-blur card-border card-paddin">
+        <div className="tools-wrapper card-settings bg-blur card-border card-padding">
           <SkillCard category="tools" skills={Skills.tools} />
         </div>
       </div>

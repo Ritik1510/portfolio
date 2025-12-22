@@ -1,22 +1,42 @@
-import { useGSAP } from "@gsap/react";
 import { profileData } from "../constants/verticalBoxMaterial"
-import { bottomToTop } from "../Animations/bottomToTop";
 import { useSidebar } from "../context/Sidebar.context";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { bottomToTop } from "../Animations/bottomToTop";
 
 function Profile() {
-  const expanded = useSidebar();
-  useGSAP(() => {
+  const { expanded } = useSidebar();
+  const scopeRef = useRef(null);
+
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
     if (!expanded) return;
+    if (hasAnimated.current) return;
+
+    const ctx = gsap.context(() => {
       bottomToTop({
-        targets: "#id-profile-wrapper > *",
+        targets: scopeRef.current.children,
         y: 300,
-        duration: 1,
-      })
-    }, [expanded]);
+        duration: 0.8,
+      });
+    }, scopeRef);
+
+    hasAnimated.current = true;
+
+    return () => ctx.revert();
+  }, [expanded]);
+
+  useEffect(() => {
+    console.log("Profile mounted");
+    return () => console.log("Profile unmounted");
+  }, []);
 
   return (
     <>
       <div
+        ref={scopeRef}
         id="id-profile-wrapper"
         className={`profile-wrapper flex flex-col 
         card-border card-padding card-grid overflow-hidden 

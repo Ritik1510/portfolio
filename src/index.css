@@ -339,7 +339,7 @@ img {
   }
 
   .card-wrapper {
-    max-height: 500px;
+    height: 500px;
   }
 
   .profile-wrapper {

@@ -19,7 +19,6 @@ export default function SkillsSection() {
         grid gap-4 grid-cols-1
         md:grid-cols-[repeat(auto-fit,minmax(280px,1fr))]
         lg:grid-cols-[repeat(auto-fit,minmax(320px,1fr))]
-        lg:place-self-center
         ">
         <div className="frameworks-wrapper card-settings bg-blur card-border card-padding">
           <SkillCard category="Frameworks" skills={Skills.frameworks} />

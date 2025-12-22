@@ -14,7 +14,7 @@ export default function AboutSection() {
 
   return (
     <>
-      <div id="id-about-section-wrapper">
+      <div id="id-about-section-wrapper" className="sm:w-[85%] lg:w-[75%] mx-auto">
         <ul 
           id="id-about-ul-wrapper" 
           className="about-ul-wrapper flex flex-col 

@@ -14,8 +14,8 @@ function Resume() {
     <>
       <div 
         id="id-resume-wrapper"
-        className="resume-wrapper grid 
-        grid-cols-1 gap-1 h-full w-full">
+        className="resume-wrapper flex flex-col
+        gap-1 h-full w-full">
         <div className="resume-image-holder mx-auto">
           {resumeImage ? (
             <img 

@@ -11,7 +11,7 @@ function Contact() {
     
   return (
     <>
-      <div className="contact-wrapper mx-auto w-[70%]">
+      <div className="contact-wrapper mx-auto sm:w-[85%] md:w-[75%]">
         <ul id="id-contact-ul-wrapper" className="contact-ul-wrapper flex flex-col gap-3">
           {contactData.map((item, index) => (
             <li key={index} className="contact-li-item flex items-center gap-3 border-b-[0.2367px]">

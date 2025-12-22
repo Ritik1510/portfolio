@@ -18,7 +18,7 @@ export default function ProjectCard({ project, highlight = false }) {
   return (
     <>
       <div id="id-card-wrapper" className="card-wrapper card-settings card-padding 
-      gap-[0.8563px] flex flex-col items-start justify-between">
+      gap-[0.8563px] flex flex-col justify-between mx-auto">
         {/* image */}
         <div className="card-image-box">
           <img src={project.image} alt={project.title} className="card-image" />
@@ -65,7 +65,7 @@ export default function ProjectCard({ project, highlight = false }) {
         </div>
 
         {/* Description */}
-        <div className="card-description-box overflow-auto">
+        <div className="card-description-box overflow-y-auto">
           <p className="leading-relaxed text-sm">{project.Description}</p>
         </div>
 

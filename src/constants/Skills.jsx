@@ -3,6 +3,7 @@ import {
   SiGnubash,
   SiHtml5,
   SiJavascript,
+  SiMongoose,
   SiMysql,
   SiPostgresql,
   SiPostman,
@@ -13,6 +14,7 @@ import {
   SiVite,
 } from "react-icons/si";
 import { AiFillApi } from "react-icons/ai";
+import { FcNext } from "react-icons/fc";
 
 const languages = {
   Typescript: {
@@ -57,6 +59,11 @@ const frameworks = {
     name: "React",
     icon: <SiReact />,
     href: "https://youtu.be/Tn6-PIqc4UM",
+  }, 
+  Nextjs: {
+    name: "Next.js",
+    icon: <FcNext />,
+    href: "https://nextjs.org/",
   }
 };
 
@@ -83,6 +90,11 @@ const tools = {
     name: "Postman",
     icon: <SiPostman />,
     href: "https://www.postman.com/",
+  },
+  Mongoose: {
+    name: "Mongoose",
+    icon: <SiMongoose />,
+    href: "https://mongoosejs.com/",
   }
 };
 

@@ -20,16 +20,16 @@ export default function SkillsSection() {
         md:grid-cols-[repeat(auto-fit,minmax(280px,1fr))]
         lg:grid-cols-[repeat(auto-fit,minmax(320px,1fr))]
         ">
-        <div className="frameworks-wrapper card-settings bg-blur card-border card-padding">
+        <div className="frameworks-wrapper card-settings card-border card-padding">
           <SkillCard category="Frameworks" skills={Skills.frameworks} />
         </div>
-        <div className="languages-wrapper card-settings bg-blur card-border card-padding">
+        <div className="languages-wrapper card-settings card-border card-padding">
           <SkillCard category="Languages" skills={Skills.languages} />
         </div>
-        <div className="databases-wrapper card-settings bg-blur card-border card-padding">
+        <div className="databases-wrapper card-settings card-border card-padding">
           <SkillCard category="Databases" skills={Skills.databases} />
         </div>
-        <div className="tools-wrapper card-settings bg-blur card-border card-padding">
+        <div className="tools-wrapper card-settings card-border card-padding">
           <SkillCard category="tools" skills={Skills.tools} />
         </div>
       </div>
@@ -41,13 +41,13 @@ const SkillCard = ({ category, skills }) => {
   return (
     <div className="skillCard-wrapper grid">
       <div className="skillCard-category-wrapper flex justify-between items-center">
-        <span className="skillCard-category-text font-bold tracking-wider lg:text-xl">
+        <span className="skillCard-category-text font-bold tracking-wider lg:text-xl text-orange-400">
           {category}
         </span>
       </div>
-      <ul className="skills-container card-padding">
+      <ul className="skills-container">
         {Object.values(skills).map((skill) => (
-          <li key={skill.name} className="">
+          <li key={skill.name} className="bg-blur">
             <Link
               href={skill.href}
               target="_blank"

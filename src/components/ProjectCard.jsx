@@ -24,44 +24,46 @@ export default function ProjectCard({ project, highlight = false }) {
           <img src={project.image} alt={project.title} className="card-image" />
         </div>
 
-        <div className="card-heading bg-blur rounded-sm w-full">
+        <div className="card-heading rounded-sm w-full">
           <span className="text-lg leading-tight">{project.title}</span>
         </div>
 
-        {/* timeline */}
-        <div className="card-link-box">
-          <span className="relative inline-flex">
-            <span className="text-sm">{project.timeline}</span>
-            {project.timeline.includes("now") && (
-              <span className="flex absolute h-3 w-3 top-1/2 right-0 -mt-1.5 -mr-5 items-center justify-center">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500" />
-              </span>
-            )}
-          </span>
-        </div>
-
-        {/* optional links */}
-        <div className="card-optional-links-wrapper flex">
-          {(project.repository
-            ? [repositoryLink, ...project.otherLinks]
-            : project.otherLinks
-          ).map((link) => (
-            <a
-              key={link.url}
-              className="flex text-xl gap-2 transition-all ease-out hover:text-[rgba(233,154,102,0.957)]"
-              href={link.url || "#"}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {link.icon}
-              {link.label && (
-                <span className="uppercase hidden lg:block text-sm transition-all ease-out tracking-wider">
-                  {link.label}
+        <div className="flex justify-between items-center w-full">
+          {/* timeline */}
+          <div className="card-link-box">
+            <span className="relative inline-flex">
+              <span className="text-sm">{project.timeline}</span>
+              {project.timeline.includes("now") && (
+                <span className="flex absolute h-3 w-3 top-1/2 right-0 -mt-1.5 -mr-5 items-center justify-center">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500" />
                 </span>
               )}
-            </a>
-          ))}
+            </span>
+          </div>
+
+          {/* optional links */}
+          <div className="card-optional-links-wrapper flex">
+            {(project.repository
+              ? [repositoryLink, ...project.otherLinks]
+              : project.otherLinks
+            ).map((link) => (
+              <a
+                key={link.url}
+                className="flex text-xl gap-2 transition-all ease-out hover:text-[rgba(233,154,102,0.957)]"
+                href={link.url || "#"}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {link.icon}
+                {link.label && (
+                  <span className="uppercase hidden lg:block text-sm transition-all ease-out tracking-wider">
+                    {link.label}
+                  </span>
+                )}
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* Description */}

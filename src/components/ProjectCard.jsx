@@ -1,11 +1,11 @@
-import { BsGithub } from "react-icons/bs";
 import { useGSAP } from '@gsap/react';
 import { bottomToTop } from "../Animations/bottomToTop.js";
+import { IoEarthOutline } from "react-icons/io5";
 
 export default function ProjectCard({ project, highlight = false }) {
   const repositoryLink = {
     label: highlight ? "Repository" : "",
-    icon: <BsGithub />,
+    icon: <IoEarthOutline />,
     url: project.repository,
   };
 

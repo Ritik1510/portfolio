@@ -1,7 +1,7 @@
 import { Link, useLocation } from "wouter";
 import { useState } from "react";
 import { sideBarLinksData } from "../constants/verticalBoxMaterial.jsx";
-import profileOpenerImg from "../Assets/profile-img.jpg";
+import profileOpenerImg from "../Assets/profile-img.webp";
 import { SidebarContext } from "../context/Sidebar.context.js";
 import { ROUTES } from "../routes/routes.config.js";
 import { useGSAP } from "@gsap/react";
@@ -82,7 +82,8 @@ export default function RootLayout({ children, rightChildren }) {
             card-padding">
               <p>{currentRoute?.label ?? "Overview"}</p>
             </div>
-            {children}
+            <div className="*:mx-auto">
+            {children}</div>
           </main>
 
           {/* Right content */}

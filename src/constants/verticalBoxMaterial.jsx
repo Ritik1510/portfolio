@@ -3,10 +3,10 @@ import { RxResume } from "react-icons/rx";
 import { IoIosContact, IoIosLink } from "react-icons/io";
 import { IoMdInformationCircle } from "react-icons/io";
 import { GiSkills } from "react-icons/gi";
-import profileImage from "../Assets/profile-img.jpg"
+import profileImage from "../Assets/profile-img.webp"
 import { IoLocationOutline, IoMailOutline } from "react-icons/io5";
 import { ImLinkedin } from "react-icons/im";
-import resumeImage from "../Assets/resume-image.png";
+import resumeImage from "../Assets/resume-image.webp";
 import { BsGithub, BsInstagram } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { BiPhone } from "react-icons/bi";
@@ -69,7 +69,7 @@ export const resumeData = {
     { label: "Modified", value: "June 10, 2024" },
     {
       label: "Online",
-      value: "https://drive.google.com/file/d/19nOcjKuQoVC7M2yYAVA21kaeSbud0B5a/view?usp=drivesdk",
+      value: "https://drive.google.com/file/d/1DS6zv2g01i4grxipdObVvHsXmcho2oZB/view?usp=sharing",
       isLink: true
     }
   ]

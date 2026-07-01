@@ -52,10 +52,10 @@ function Profile() {
           </div>
         </div>
 
-        <div className="profile-name-wrapper hoverStyle">
+        <div className="profile-name-wrapper hoverStyle text-primary-dark">
           <h1>{profileData.name}</h1>
         </div>
-        <div className="profile-discription-wrapper hoverStyle">
+        <div className="profile-discription-wrapper hoverStyle text-primary-dark">
           <p>{profileData.description}</p>
         </div>
         <div className="info flex flex-col gap-1">

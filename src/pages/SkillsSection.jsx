@@ -21,7 +21,7 @@ export default function SkillsSection() {
         lg:grid-cols-[repeat(auto-fit,minmax(320px,1fr))]
         ">
         <div className="frameworks-wrapper card-settings card-border card-padding">
-          <SkillCard category="Frameworks" skills={Skills.frameworks} />
+          <SkillCard category="Frameworks & Libraries" skills={Skills.frameworks} />
         </div>
         <div className="languages-wrapper card-settings card-border card-padding">
           <SkillCard category="Languages" skills={Skills.languages} />
@@ -39,20 +39,20 @@ export default function SkillsSection() {
 
 const SkillCard = ({ category, skills }) => {
   return (
-    <div className="skillCard-wrapper grid">
+    <div className="skillCard-wrapper grid gap-small">
       <div className="skillCard-category-wrapper flex justify-between items-center">
-        <span className="skillCard-category-text font-bold tracking-wider lg:text-xl text-orange-400">
+        <span className="skillCard-category-text font-bold tracking-wider lg:text-xl text-orange-400 bg-blur primary-border-radius card-padding">
           {category}
         </span>
       </div>
       <ul className="skills-container">
         {Object.values(skills).map((skill) => (
-          <li key={skill.name} className="bg-blur">
+          <li key={skill.name}>
             <Link
               href={skill.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="skills-btn flex justify-center items-center gap-1.5 px-1" xs
+              className="skills-btn flex justify-center items-center gap-1.5 px-1 bg-blur" xs
             >
               <span className="skills-btn-icon">
                 {skill.icon}

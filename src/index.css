@@ -75,7 +75,7 @@
 
 body {
   background: var(--primary-dark-background);
-  background-image: url(./Assets/portimage.jpg);
+  background-image: url(./Assets/portimage.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;

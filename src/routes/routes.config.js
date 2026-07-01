@@ -1,8 +1,11 @@
-import AboutSection from "../pages/AboutSection.jsx";
-import Contact from "../pages/Contact.jsx";
-import ProjectsSection from "../pages/ProjectsSection.jsx";
-import Resume from "../pages/Resume.jsx";
-import SkillsSection from "../pages/SkillsSection.jsx";
+
+import { lazy } from "react";
+
+const AboutSection = lazy(() => import("../pages/AboutSection.jsx"));
+const Contact = lazy(() => import("../pages/Contact.jsx"));
+const ProjectsSection = lazy(() => import("../pages/ProjectsSection.jsx"));
+const Resume = lazy(() => import("../pages/Resume.jsx"));
+const SkillsSection = lazy(() => import("../pages/SkillsSection.jsx"));
 
 export const ROUTES = [
   {

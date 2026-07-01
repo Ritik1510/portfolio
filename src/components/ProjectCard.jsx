@@ -18,14 +18,16 @@ export default function ProjectCard({ project, highlight = false }) {
   return (
     <>
       <div id="id-card-wrapper" className="card-wrapper card-settings card-padding 
-      gap-[0.8563px] flex flex-col justify-between mx-auto">
+      gap-[0.8563px] flex flex-col justify-around mx-auto group">
         {/* image */}
         <div className="card-image-box">
           <img src={project.image} alt={project.title} className="card-image" />
         </div>
 
         <div className="card-heading rounded-sm w-full">
-          <span className="text-lg leading-tight">{project.title}</span>
+          <span className="text-lg leading-tight group-hover:text-primary-dark">
+            {project.title}
+          </span>
         </div>
 
         <div className="flex justify-between items-center w-full">

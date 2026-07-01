@@ -1,8 +1,11 @@
 import {
   SiCplusplus,
+  SiExpo,
+  SiGithubactions,
   SiGnubash,
   SiHtml5,
   SiJavascript,
+  SiMongodb,
   SiMongoose,
   SiMysql,
   SiPostgresql,
@@ -15,6 +18,7 @@ import {
 } from "react-icons/si";
 import { AiFillApi } from "react-icons/ai";
 import { FcNext } from "react-icons/fc";
+import { FaDocker, FaNode } from "react-icons/fa";
 
 const languages = {
   Typescript: {
@@ -64,6 +68,21 @@ const frameworks = {
     name: "Next.js",
     icon: <FcNext />,
     href: "https://nextjs.org/",
+  },
+  NodeJS: {
+    name: "Node.js",
+    icon: <FaNode />,
+    href: "https://nodejs.org/en",
+  },
+  ReactNative: {
+    name: "React Native",
+    icon: <SiReact />,
+    href: "https://reactnative.dev/",
+  },
+  Expo: {
+    name: "Expo",
+    icon: <SiExpo />,
+    href: "https://expo.dev/",
   }
 };
 
@@ -77,7 +96,12 @@ const databases = {
     name: "SQL", 
     icon: <SiMysql/>, 
     href: "#"
-  }
+  },
+  MongoDB: {
+    name: "MongoDB",
+    icon: <SiMongodb />,
+    href: "https://www.mongodb.com/",
+  },
 };
 
 const tools = {
@@ -95,6 +119,21 @@ const tools = {
     name: "Mongoose",
     icon: <SiMongoose />,
     href: "https://mongoosejs.com/",
+  },
+  Docker: {
+    name: "Docker",
+    icon: <FaDocker />,
+    href: "https://www.docker.com/",
+  },
+  GithubActions: {
+    name: "GitHub Actions",
+    icon: <SiGithubactions />,
+    href: "https://docs.github.com/en/actions",
+  },
+  ExpoGo: {
+    name: "Expo Go",
+    icon: <SiExpo />,
+    href: "https://expo.dev/client",
   }
 };
 

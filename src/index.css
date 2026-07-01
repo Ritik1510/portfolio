@@ -6,10 +6,17 @@
   box-sizing: border-box;
 }
 
+@theme {
+  --color-primary-light: var(--primary-light-background);
+  --color-primary-dark: var(--brand-color);
+  --color-dark-text: var(--brand-color);
+  --color-light-text: var(--light-text-color);
+}
+
 :root {
   --primary-light-background: rgb(241, 236, 236);
-  --primary-dark-background: rgba(233, 154, 102, 0.957);
-  --primary-text-color: rgb(221, 214, 214);
+  --light-text-color: rgb(221, 214, 214);
+  --brand-color: oklch(75% 0.183 55.934);
 
   --primary-font-size: clamp();
   --secondary-font-size: clamp();
@@ -34,7 +41,7 @@
   --gap-full: ;
   --gap-large: ;
   --gap-medium: ;
-  --gap-small: ;
+  --gap-small: clamp(0.235rem, 0.435rem, 0.635rem);
 
   --primary-border: 0.7563px solid white;
   --primary-padding: clamp(5px, 7px, 8.5px);
@@ -74,7 +81,7 @@
 }
 
 body {
-  background: var(--primary-dark-background);
+  background: var(--brand-color);
   background-image: url(./Assets/portimage.webp);
   background-position: center;
   background-repeat: no-repeat;
@@ -84,7 +91,7 @@ body {
   display: block;
   height: 100svh;
   min-width: 100svw;
-  color: var(--primary-text-color);
+  color: var(--light-text-color);
 }
 
 img {
@@ -166,7 +173,7 @@ img {
 
 .nav-links:hover {
   background-color: hsla(260, 33%, 93%, 0.528);
-  color: var(--primary-dark-background);
+  color: var(--brand-color);
   border-radius: var(--borderRadius-medium);
 }
 
@@ -289,7 +296,7 @@ img {
 }
 
 .skills-btn:hover {
-  color: var(--primary-dark-background);
+  color: var(--brand-color);
 }
 
 .skillCard-wrapper {
@@ -300,7 +307,7 @@ img {
 .info>*:hover,
 .about-ul-wrapper>*:hover {
   backdrop-filter: blur(20px);
-  color: var(--primary-dark-background);
+  color: var(--brand-color);
 }
 
 .tab-tracker-heading {
@@ -311,6 +318,10 @@ img {
 /* common classes css */
 .bg-blur {
   backdrop-filter: blur(20px);
+}
+
+.gap-small {
+  gap: var(--gap-small);
 }
 
 @media (max-width: 1023px) {
@@ -347,7 +358,7 @@ img {
   }
 
   .card-wrapper {
-    height: 500px;
+    height: 480px;
   }
 
   .profile-wrapper {

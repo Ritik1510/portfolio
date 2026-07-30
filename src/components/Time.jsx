@@ -1,4 +1,4 @@
-import { relativeTime } from "@/utils/dayjs";
+import { relativeTime } from "../utils/Dayjs";
 
 export default function Time({ time }) {
   return (

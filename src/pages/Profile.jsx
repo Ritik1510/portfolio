@@ -4,9 +4,13 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { bottomToTop } from "../Animations/bottomToTop";
+import { useGithubLastCommit } from "../hooks/useGithubLastCommit";
+import Time from "../components/Time";
+import { BsGithub } from "react-icons/bs";
 
 function Profile() {
   const { expanded } = useSidebar();
+  const { commit, loading } = useGithubLastCommit();
   const scopeRef = useRef(null);
 
   const hasAnimated = useRef(false);
@@ -50,6 +54,22 @@ function Profile() {
                 className="profile-image " />
             </a>
           </div>
+        </div>
+        <div className="profile-last-update-indicator">
+          {!loading && commit && (
+            <a
+              href={commit.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="profile-last-update-link flex items-center gap-2 hoverStyle text-primary-dark"
+              title={`${commit.message} (${commit.sha})`}
+            >
+              <BsGithub />
+              <span>
+                Updated <Time time={commit.date} />
+              </span>
+            </a>
+          )}
         </div>
 
         <div className="profile-name-wrapper hoverStyle text-primary-dark">
